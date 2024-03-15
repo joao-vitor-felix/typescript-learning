@@ -1,8 +1,8 @@
 // https://www.typescriptlang.org/docs/handbook/2/functions.html#rest-parameters-and-arguments
 // https://www.typescriptlang.org/docs/handbook/2/functions.html#parameter-destructuring
 
-
-// Do your normal destructuring just like JavaScript, when you want to type something in a destructuring providing a default value will give you a type already, so if you have default values you don't need to provide a type. But if you have something that is not a default value you need to provide a type. It can't be inline, it has to be a type for the whole object.
+// When you want to type something in a destructuring, providing a default value will give you a type already, so if you have default values you don't need to provide a type. 
+// But if you have something that is not a default value, you need to provide a type. It can't be inline, it has to be a type for the whole object.
 
 type Options = {
   debugMode?: boolean;
