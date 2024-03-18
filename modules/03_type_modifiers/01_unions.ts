@@ -5,12 +5,10 @@
 let id: string | number = 7
 id = '7'
 
-
 type Person = {
   id: number | string
   isProgrammer?: boolean
 }
-
 
 type Todo = {
   name: number | string
@@ -21,9 +19,14 @@ const todo: Todo = {
   name: 'Learn TypeScript', status: 'In Progress'
 }
 
-
 // You can make a union of multiple types, including other unions. It can also be defined inline. You can only do union with types, interfaces cannot build unions.
 
 type TodoPerson = Person | Todo
+
+// As you type the object by defining properties of the union, you will see that the properties of both types are available. This is because the object can be either of the types in the union. But when add properties from one of the types, if the rest of the properties is required, you'll need to add it to the object to match the type.
+const obj: TodoPerson = {
+  name: 'bla',
+  status: "In Progress"
+}
 
 export default {}
