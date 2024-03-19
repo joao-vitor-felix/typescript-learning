@@ -16,7 +16,7 @@ const SKILL_LEVELS = ["Beginner", "Intermediate", "Expert"] as const
 
 type Person = {
   // skillLevel : "Beginner" | "Intermediate" | "Expert"
-  skillLevel : typeof SKILL_LEVELS[number]
+  skillLevel : (typeof SKILL_LEVELS)[number]
 }
 
 SKILL_LEVELS.forEach(skillLevel => {
