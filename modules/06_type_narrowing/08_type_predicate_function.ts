@@ -1,6 +1,10 @@
 // https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
 
-// Type predicates is a way to narrow down the type of a variable within a conditional block. It's a way to tell the compiler that a variable is of a specific type, and it should be treated as such within that block. We shouldn't use that much or use it with caution, because we can pass a type predicate that is not true, and the compiler will not throw an error.
+// Type predicates is a way to narrow down the type of a variable within a conditional block. It's a way to tell the compiler that a variable is of a specific type, and it should be treated as such within that block.
+// We simply need to define a function whose return type is a type predicate
+// A predicate takes the form parameterName is Type, where parameterName must be the name of a parameter from the current function signature.
+// Any time the predicate function is called with some variable, TypeScript will narrow that variable to that specific type if the original type is compatible.
+// We shouldn't use that much or use it with caution, because we can pass a type predicate that is not true, and the compiler will not throw an error.
 
 type Person = {
   name: string

@@ -3,6 +3,8 @@
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions
 
 // Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+// In modern TypeScript, you may not need an enum when an object with as const could suffice.
+// as const turn an object and its properties readonly
 
 const nums = ["1", "2", "3"] as const
 const a = nums[0] // "1"
@@ -24,6 +26,7 @@ SKILL_LEVELS.forEach(skillLevel => {
 })
 
 // as const make the object and its properties readonly
+// We can also use as const with arrays in order to create enums
 const person = {
   name: "Todd",
   age: 27,

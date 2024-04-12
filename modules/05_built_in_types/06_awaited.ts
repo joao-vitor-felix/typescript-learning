@@ -1,6 +1,7 @@
 // https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype
 
 // Awaited is used to obtain the type that is awaited from a Promise. It specifically unwraps the Promise and returns the type that the Promise resolves to.
+// Awaited<Type>
 
 type Async = Promise<string>
 

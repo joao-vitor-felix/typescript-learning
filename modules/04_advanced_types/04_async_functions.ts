@@ -1,6 +1,6 @@
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#functions-which-return-promises
 
-// If you have an async function the return type always need to be a promise
+// If you want to annotate the return type of a function which returns a promise, you should use the Promise type.
 
 async function getFavoriteNumber(): Promise<number> {
   return 26;
